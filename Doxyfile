@@ -3,6 +3,7 @@ PROJECT_NAME           = "tstd"
 PROJECT_NUMBER         = 0.1.0
 PROJECT_BRIEF          = "Tiny STD-like utilities in C"
 OUTPUT_DIRECTORY       = docs
+OPTIMIZE_OUTPUT_FOR_C  = YES
 
 # Input
 INPUT                  = src include README.md
@@ -14,7 +15,6 @@ EXCLUDE_PATTERNS       = */.git/* */.cache/*
 # Main page
 USE_MDFILE_AS_MAINPAGE = README.md
 MARKDOWN_SUPPORT       = YES
-EXTENSION_MAPPING      = md=markdown
 
 # HTML
 GENERATE_HTML          = YES
@@ -22,32 +22,35 @@ HTML_OUTPUT            = html
 GENERATE_TREEVIEW      = YES
 HTML_DYNAMIC_SECTIONS  = YES
 SEARCHENGINE           = YES
+# ... existing code ...
 
 # LaTeX/PDF
 GENERATE_LATEX         = NO
+# ... existing code ...
 
 # Source browsing
 SOURCE_BROWSER         = YES
 INLINE_SOURCES         = YES
-STRIP_CODE_COMMENTS    = NO
+STRIP_CODE_COMMENTS    = YES
 
 # Extraction and docs quality
-EXTRACT_ALL            = YES
+EXTRACT_ALL            = NO
 EXTRACT_PRIVATE        = NO
 EXTRACT_STATIC         = YES
-EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_LOCAL_CLASSES  = NO
 HAVE_DOT               = YES
-CALL_GRAPH             = YES
-CALLER_GRAPH           = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
 DOT_IMAGE_FORMAT       = svg
 INTERACTIVE_SVG        = YES
-DOT_TRANSPARENT        = YES
+DOT_TRANSPARENT        = NO
+DOT_GRAPH_MAX_NODES    = 50
 
 # Warnings and tidy
 WARNINGS               = YES
-WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_UNDOCUMENTED   = NO
 WARN_IF_DOC_ERROR      = YES
-WARN_NO_PARAMDOC       = YES
+WARN_NO_PARAMDOC       = NO
 WARN_AS_ERROR          = NO
 QUIET                  = NO
 
