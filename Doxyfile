@@ -15,7 +15,7 @@ SHOW_DIRECTORIES       = YES
 EXCLUDE_PATTERNS       = */.git/* */.cache/*
 
 # Main page
-USE_MDFILE_AS_MAINPAGE = README.md
+#USE_MDFILE_AS_MAINPAGE = README.md
 MARKDOWN_SUPPORT       = YES
 
 # HTML
@@ -28,8 +28,8 @@ SEARCHENGINE           = YES
 GENERATE_LATEX         = NO
 
 # Source browsing
-SOURCE_BROWSER         = YES
-INLINE_SOURCES         = YES
+SOURCE_BROWSER         = NO
+INLINE_SOURCES         = NO
 STRIP_CODE_COMMENTS    = YES
 
 # Extraction and docs quality
