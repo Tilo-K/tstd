@@ -5,11 +5,15 @@ set(CMAKE_C_STANDARD 23)
 
 add_library(tstd STATIC library.c
         include/tstd/string.h
-        string.c)
+        string.c
+        list.c
+        include/tstd/list.h)
 
 
-add_executable(test_tstd test/test_main.c)
-target_link_libraries(test_tstd tstd)
+add_executable(test_tstd_string test/test_string.c)
+add_executable(test_tstd_list test/test_list.c)
+target_link_libraries(test_tstd_string tstd)
+target_link_libraries(test_tstd_list tstd)
 
 target_include_directories(tstd
         PUBLIC
@@ -18,4 +22,5 @@ target_include_directories(tstd
 )
 
 enable_testing()
-add_test(NAME tstd_tests COMMAND test_tstd)
+add_test(NAME tstd_tests_string COMMAND test_tstd_string)
+add_test(NAME tstd_tests_list COMMAND test_tstd_list)

@@ -29,6 +29,5 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(tstd)
 
 add_executable(myapp src/main.c)
-
 target_link_libraries(myapp PRIVATE tstd)
 ```
