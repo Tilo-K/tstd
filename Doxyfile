@@ -64,4 +64,10 @@ GENERATE_TREEVIEW      = YES
 DISABLE_INDEX          = NO
 FULL_SIDEBAR           = NO
 HTML_COLORSTYLE        = DARK
-HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css
+HTML_EXTRA_STYLESHEET  = \
+  doxygen-awesome-css/doxygen-awesome.css \
+  doxygen-awesome-css/doxygen-awesome-darkmode-toggle.css \
+  doxygen-awesome-css/doxygen-awesome-tabs.css
+
+HTML_EXTRA_FILES       = \
+  doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js
