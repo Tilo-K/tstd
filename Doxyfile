@@ -61,7 +61,7 @@ INCLUDE_PATH           = include
 
 # Doxygen Awesome theme
 GENERATE_TREEVIEW      = YES
-DISABLE_INDEX          = YES
+DISABLE_INDEX          = NO
 FULL_SIDEBAR           = NO
 HTML_COLORSTYLE        = DARK
 HTML_EXTRA_STYLESHEET  = \
