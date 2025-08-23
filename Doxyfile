@@ -21,7 +21,6 @@ MARKDOWN_SUPPORT       = YES
 # HTML
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
-GENERATE_TREEVIEW      = YES
 HTML_DYNAMIC_SECTIONS  = YES
 SEARCHENGINE           = YES
 
@@ -59,3 +58,10 @@ ENABLE_PREPROCESSING   = YES
 MACRO_EXPANSION        = YES
 EXPAND_ONLY_PREDEF     = NO
 INCLUDE_PATH           = include
+
+# Doxygen Awesome theme
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = NO
+HTML_COLORSTYLE        = DARK
+HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css
