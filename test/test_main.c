@@ -102,6 +102,16 @@ int test_string_concat() {
     return 0;
 }
 
+int test_trim() {
+    char* test_str = "   Hello, test. test   ";
+    char* trimmed_str = str_trim(test_str);
+
+    assert(strcmp(trimmed_str, "Hello, test. test") == 0);
+    free(trimmed_str);
+
+    return 0;
+}
+
 int test_string_functions() {
     int result = 0;
 
@@ -112,6 +122,7 @@ int test_string_functions() {
     result += test_string_to_upper();
     result += test_string_to_lower();
     result += test_string_concat();
+    result += test_trim();
 
     return result;
 }

@@ -110,3 +110,24 @@ char* str_concat(const char* str1, const char* str2) {
     result[len1 + len2] = '\0';
     return result;
 }
+
+bool p_str_char_is_rubbish(char c) {
+    return c == ' ' || c == '\t' || c == '\n' || c == '\r';
+}
+
+char* str_trim(const char* str) {
+    size_t start = 0;
+    size_t end = strlen(str) - 1;
+    while (p_str_char_is_rubbish(str[start])) {
+        start++;
+    }
+    while (p_str_char_is_rubbish(str[end])) {
+        end--;
+    }
+
+    char* new_str = malloc(sizeof(char) * (end - start + 2));
+    memcpy(new_str, &str[start], end - start + 1);
+    new_str[end-start+1] = '\0';
+
+    return new_str;
+}

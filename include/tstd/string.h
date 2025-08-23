@@ -72,4 +72,12 @@ void str_to_lower(char* str);
  */
 char* str_concat(const char* str1, const char* str2);
 
+/**
+ * @brief Trim leading and trailing whitespace characters from a string.
+ * @param str Null-terminated input string (must not be NULL).
+ * @return A newly allocated string with leading and trailing whitespace removed.
+ *         The caller is responsible for freeing the allocated memory.
+ */
+char* str_trim(const char* str);
+
 #endif //TSTD_STRING_H
