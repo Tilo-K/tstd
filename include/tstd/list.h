@@ -1,6 +1,9 @@
-//
-// Created by tilok on 23.08.2025.
-//
+/**
+* @file list.h
+ * @brief List utilities
+ * @date 2025-08-23
+ * @author Tilo
+ */
 
 #ifndef TSTD_LIST_H
 #define TSTD_LIST_H
