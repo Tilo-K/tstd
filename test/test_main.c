@@ -94,6 +94,14 @@ int test_string_to_lower() {
     return 0;
 }
 
+int test_string_concat() {
+    char* test_str = str_concat("Hello", "World");
+    assert(strcmp(test_str, "HelloWorld") == 0);
+    free(test_str);
+
+    return 0;
+}
+
 int test_string_functions() {
     int result = 0;
 
@@ -103,6 +111,7 @@ int test_string_functions() {
     result += test_split_function_by_substring();
     result += test_string_to_upper();
     result += test_string_to_lower();
+    result += test_string_concat();
 
     return result;
 }

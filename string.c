@@ -99,3 +99,14 @@ void str_to_lower(char* str) {
         }
     }
 }
+
+char* str_concat(const char* str1, const char* str2) {
+    const size_t len1 = strlen(str1);
+    const size_t len2 = strlen(str2);
+
+    char* result = malloc(sizeof(char) * (len1 + len2 + 1));
+    memcpy(result, str1, len1);
+    memcpy(&result[len1], str2, len2);
+    result[len1 + len2] = '\0';
+    return result;
+}

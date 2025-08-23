@@ -63,4 +63,13 @@ void str_to_upper(char* str);
  */
 void str_to_lower(char* str);
 
+/**
+ * @brief Concatenate two null-terminated strings into a newly allocated string.
+ * @param str1 First input string (must not be NULL).
+ * @param str2 Second input string (must not be NULL).
+ * @return Pointer to a newly allocated null-terminated string containing the concatenated result of str1 and str2.
+ *         Caller is responsible for freeing the allocated memory.
+ */
+char* str_concat(const char* str1, const char* str2);
+
 #endif //TSTD_STRING_H
