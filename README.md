@@ -23,7 +23,7 @@ include(FetchContent)
 FetchContent_Declare(
         tstd
         GIT_REPOSITORY https://github.com/Tilo-K/tstd.git
-        GIT_TAG main
+        GIT_TAG master
 )
 
 FetchContent_MakeAvailable(tstd)
