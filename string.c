@@ -1,4 +1,6 @@
-#include "string.h"
+#include  "include/string.h"
+#include <stdlib.h>
+#include <string.h>
 
 
 size_t str_count_occurrences(const char* str, const char c) {

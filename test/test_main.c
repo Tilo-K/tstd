@@ -6,7 +6,7 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include "../string.h"
+#include "../include/string.h"
 
 int test_count_occurrences() {
     const char* test_str = "11abababb111";
