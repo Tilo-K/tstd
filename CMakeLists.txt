@@ -4,7 +4,7 @@ project(tstd C)
 set(CMAKE_C_STANDARD 23)
 
 add_library(tstd STATIC library.c
-        include/string.h
+        include/tstd/string.h
         string.c)
 
 
