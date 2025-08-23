@@ -6,10 +6,12 @@ OUTPUT_DIRECTORY       = docs
 OPTIMIZE_OUTPUT_FOR_C  = YES
 
 # Input
-INPUT                  = src include README.md
+INPUT                  = .
 FILE_PATTERNS          = *.c *.h *.md
 RECURSIVE              = YES
-EXCLUDE                = build docs
+EXCLUDE                = build docs .github .idea test
+SHOW_FILES             = YES
+SHOW_DIRECTORIES       = YES
 EXCLUDE_PATTERNS       = */.git/* */.cache/*
 
 # Main page
@@ -22,11 +24,9 @@ HTML_OUTPUT            = html
 GENERATE_TREEVIEW      = YES
 HTML_DYNAMIC_SECTIONS  = YES
 SEARCHENGINE           = YES
-# ... existing code ...
 
 # LaTeX/PDF
 GENERATE_LATEX         = NO
-# ... existing code ...
 
 # Source browsing
 SOURCE_BROWSER         = YES
