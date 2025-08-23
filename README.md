@@ -1,6 +1,6 @@
 # TSTD
 
-A C library providing various string manipulation utilities.
+A C library providing various utilities.
 
 ## Usage
 
