@@ -6,6 +6,8 @@
 
 #include <string.h>
 
+#include "helper.h"
+
 
 list* list_create() {
     return list_create_with_capacity(10);
@@ -13,7 +15,9 @@ list* list_create() {
 
 list* list_create_with_capacity(size_t capacity) {
     void** data = malloc(capacity * sizeof(void *));
+    OOM(data);
     list* new_list = malloc(sizeof(list));
+    OOM(new_list);
 
     new_list->data = data;
     new_list->length = 0;
@@ -25,6 +29,7 @@ list* list_create_with_capacity(size_t capacity) {
 void list_resize(list* list) {
     size_t new_capacity = (list->capacity + 1) * 1.5;
     void** new_data = malloc(new_capacity * sizeof(void *));
+    OOM(new_data);
     memcpy(new_data, list->data, list->length * sizeof(void *));
     free(list->data);
     list->data = new_data;
