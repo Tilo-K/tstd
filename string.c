@@ -1,4 +1,5 @@
 #include  "tstd/string.h"
+#include "helper.h"
 
 size_t str_count_occurrences(const char* str, const char c) {
     size_t i = 0;
@@ -28,6 +29,8 @@ size_t str_count_occurrences_of_substring(const char* str, const char* substr) {
 size_t str_split_by_char(const char* str, const char delimiter, char*** result) {
     const size_t size = str_count_occurrences(str, delimiter);
     char** parts = malloc((size+1) * sizeof(char*));
+    OOM(parts);
+
     int curr_part_idx = 0;
     int last_part_end = 0;
     int idx = 0;
@@ -35,6 +38,7 @@ size_t str_split_by_char(const char* str, const char delimiter, char*** result) 
         if (str[idx] == delimiter) {
             const int len = idx - last_part_end;
             char* part = malloc(sizeof(char) * (len+1));
+            OOM(part);
             memcpy(part, &str[last_part_end], len);
             part[idx-last_part_end] = '\0';
 
@@ -45,6 +49,7 @@ size_t str_split_by_char(const char* str, const char delimiter, char*** result) 
         idx++;
     }
     char* part = malloc(sizeof(char) * (idx-last_part_end+1));
+    OOM(part);
     memcpy(part, &str[last_part_end], idx-last_part_end);
     part[idx-last_part_end] = '\0';
     parts[curr_part_idx++] = part;
@@ -64,6 +69,7 @@ size_t str_split_by_substring(const char* str, const char* substr, char*** resul
         if (strstr(&str[idx], substr) == &str[idx]) {
             const size_t len = idx - last_part_end;
             char* part = malloc(sizeof(char) * (len+1));
+            OOM(part);
             memcpy(part, &str[last_part_end], len);
             part[len] = '\0';
 
@@ -75,6 +81,7 @@ size_t str_split_by_substring(const char* str, const char* substr, char*** resul
     }
     const size_t len = idx - last_part_end;
     char* part = malloc(sizeof(char) * (len+1));
+    OOM(part);
     memcpy(part, &str[last_part_end], len);
     part[len] = '\0';
 
@@ -105,6 +112,7 @@ char* str_concat(const char* str1, const char* str2) {
     const size_t len2 = strlen(str2);
 
     char* result = malloc(sizeof(char) * (len1 + len2 + 1));
+    OOM(result);
     memcpy(result, str1, len1);
     memcpy(&result[len1], str2, len2);
     result[len1 + len2] = '\0';
@@ -126,6 +134,7 @@ char* str_trim(const char* str) {
     }
 
     char* new_str = malloc(sizeof(char) * (end - start + 2));
+    OOM(new_str);
     memcpy(new_str, &str[start], end - start + 1);
     new_str[end-start+1] = '\0';
 

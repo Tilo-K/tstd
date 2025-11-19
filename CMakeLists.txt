@@ -7,7 +7,8 @@ add_library(tstd STATIC library.c
         include/tstd/string.h
         string.c
         list.c
-        include/tstd/list.h)
+        include/tstd/list.h
+        helper.h)
 
 
 add_executable(test_tstd_string test/test_string.c)
