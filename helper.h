@@ -8,7 +8,7 @@
 
 #define OOM(ptr) { \
     if(ptr == NULL) { \
-        puts("Out of memory"); \
+        puts("Out of memory\n"); \
         exit(137); \
     } \
 }
