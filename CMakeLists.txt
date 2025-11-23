@@ -3,6 +3,8 @@ project(tstd C)
 
 set(CMAKE_C_STANDARD 23)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 add_library(tstd STATIC library.c
         include/tstd/string.h
         string.c
